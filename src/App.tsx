@@ -1,11 +1,15 @@
 import './App.css';
-import Hello from './pages/Hello';
+
+import { AuthProvider } from './context/auth';
+import Main from './components/Main';
 
 function App() {
   return (
-    <div className="App">
-      <Hello />
-    </div>
+    <AuthProvider>
+      <div className="App">
+        <Main />
+      </div>
+    </AuthProvider>
   );
 }
 
